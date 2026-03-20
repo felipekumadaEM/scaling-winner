@@ -476,6 +476,63 @@ footer {
   font-size: 0.8rem;
 }
 
+/* Social sharing buttons */
+.share-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border-light);
+}
+
+.share-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-right: 2px;
+}
+
+.share-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.share-btn:hover {
+  background-color: var(--background);
+  border-color: var(--primary);
+  transform: scale(1.15);
+}
+
+/* Highlighted activity card (when shared via URL) */
+.activity-card.highlighted {
+  box-shadow: 0 0 0 3px var(--secondary), 0 8px 15px rgba(0, 0, 0, 0.15);
+  animation: highlight-pulse 1s ease-in-out 3;
+}
+
+@keyframes highlight-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px var(--secondary), 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 6px var(--secondary-light), 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
 /* Search and Filter Components - Updated for Sidebar */
 .search-box {
   display: flex;
